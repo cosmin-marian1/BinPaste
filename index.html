@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BinPaste</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="left-text">Bin Paste</div>
+        
+        <div class="search-add-container">
+            <div class="search-button">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="search-menu">
+                <input type="text" id="search-input" placeholder="Search notes...">
+            </div>
+            <button class="add-button">Add Paste</button>
+            <button class="login-button">Login</button>
+            <div id="username-display" class="username_logged">
+                <span id="username-text"></span>
+                <ul id="user-menu">
+                    <li id="account-settings">Account Info</li>
+                    <li id="logout-btn">Logout</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+<div id="account-info-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" id="close-account-info">&times;</span>
+        <h2>Account Information</h2>
+        <p><strong>Username:</strong> <span id="account-username"></span></p>
+        <p><strong>Email:</strong> <span id="account-email"></span></p>
+        <p><strong>Account Created:</strong> <span id="account-createdAt"></span></p>
+        <button id="change-password" class="redBtn">Change Password</button>
+        <button id="delete-account" class="redBtn">Delete Account</button>
+    </div>
+</div>
+
+<div id="delete-confirmation-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" id="close-delete-popup">&times;</span>
+        <h3>Esti sigur ca vrei sa faci acest lucru?</h3>
+        <div class="popup-buttons">
+            <button id="confirm-delete-btn" class="confirm-btn">Yes</button>
+            <button id="cancel-delete-btn" class="cancel-btn">Cancel</button>
+        </div>
+    </div>
+</div>
+  
+<div id="login-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" required>
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" required>
+            <div class="remember-me">
+                <input type="checkbox" id="remember-me" class="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <p id="login-error-message" style="color: red; margin: 0; padding: 0; font-size: 12px;"></p>
+            <button type="submit">Login</button>
+        </form>
+        <p class="register-text">Don't have an account? <a href="#" id="open-register">Register here</a></p>
+    </div>
+</div>
+
+<div id="register-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Register</h2>
+        <form id="register-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" maxlength="15" required>
+            <label for="register-email">Email:</label>
+            <input type="email" id="register-email" required>
+            <label for="register-password">Password:</label>
+            <input type="password" id="register-password" required>
+            <p id="register-error-message" style="color: red; margin: 0; padding: 0; font-size: 12px;"></p>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
+    
+<div id="notes-container" class="notes-grid">
+    <div class="no-notes-message" style="display: none;">
+        There are no notes.
+    </div>
+</div>
+
+<div id="pagination" class="pagination"></div>
+
+<div id="popup-view" class="popup-view">
+    <div class="popup-content-view">
+        <span class="close-btn-view">&times;</span>
+    </div>
+</div>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Add a note</h2>
+        <form id="note-form">
+            <label for="title">Title (max 25 caractere)</label>
+            <p id="add-note-error-message" style="color: red; margin: 0; padding: 0; font-size: 12px;"></p>
+            <input type="text" id="title" name="title" required>
+            <label for="content">Content</label>
+            <textarea id="content" name="content" class="no-resize" required></textarea>
+            <label for="color-picker">Pick a color</label>
+            <input type="color" id="color-picker" value="#ffffff">
+            <button type="submit">Save note</button>
+        </form>
+    </div>
+</div>
+
+<div id="notification" class="notification">
+    Note saved successfully.
+</div>
+
+<script src="script.js"></script>
+<script src="auth.js" defer></script>
+</body>
+</html>
