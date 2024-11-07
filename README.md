@@ -8,7 +8,7 @@ A simple, minimalistic web app inspired by PasteBin, allowing users to save and 
 
 Install: 
 
-git clone https://github.com/yourusername/BinPaste.git
+git clone https://github.com/cosmin-marian1/BinPaste
 
 Install dependencies:
 
