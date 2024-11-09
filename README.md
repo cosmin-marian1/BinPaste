@@ -1,5 +1,5 @@
 ✨ BinPaste 📝
-!A simple, minimalistic web app inspired by PasteBin, allowing users to save and share snippets easily! With features like login, note management, and a clean, responsive UI, this project is a straightforward !solution for sharing quick notes.
+A simple, minimalistic web app inspired by PasteBin, allowing users to save and share snippets easily! With features like login, note management, and a clean, responsive UI, this project is a straightforward solution for sharing quick notes.
 
 🚀 Features
 🌐 Paste & share text easily without logging in
